@@ -1,14 +1,11 @@
-package br.com.sys.reserve.controller;
+package br.com.sys.app.controller;
 
-import br.com.sys.main.model.dao.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HomeViewController {
+public class HomeAppViewController {
 	
-	private Database db = new Database();
-
     @FXML
     private Label lblNum;
 

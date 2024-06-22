@@ -1,4 +1,4 @@
-package br.com.sys.main.model.dao;
+package br.com.sys.app.model.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

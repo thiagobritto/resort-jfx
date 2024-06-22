@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane minHeight="400.0" minWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="br.com.sys.reserve.controller.HomeViewController">
+<AnchorPane minHeight="400.0" minWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="br.com.sys.app.controller.HomeAppViewController">
    <children>
       <Label layoutX="27.0" layoutY="23.0" text="Teste" />
       <Button layoutX="136.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleAdd" text="add" />
