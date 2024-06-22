@@ -6,6 +6,7 @@ import br.com.sys.app.model.interfaces.HookController;
 import br.com.sys.app.model.interfaces.HookStage;
 import br.com.sys.app.model.interfaces.HookStageController;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class AppStage extends AppStart {
@@ -15,14 +16,8 @@ public class AppStage extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 
-			if (stage.getScene() == null) {
-				stage.setScene(new Scene(fxmlLoader.load()));				
-			} else {
-				double width = stage.getScene().getWidth();
-				double height = stage.getScene().getHeight();
-				stage.setScene(new Scene(fxmlLoader.load(), width,height));								
-			}
-
+			setScene(fxmlLoader.load());
+			
 			if (!stage.isShowing())
 				stage.show();
 		} catch (Exception e) {
@@ -35,15 +30,8 @@ public class AppStage extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 
-			if (stage.getScene() == null) {
-				stage.setScene(new Scene(fxmlLoader.load()));				
-			} else {
-				double width = stage.getScene().getWidth();
-				double height = stage.getScene().getHeight();
-				stage.setScene(new Scene(fxmlLoader.load(), width,height));								
-			}
-
-			hookStage.hang(modal);
+			setScene(fxmlLoader.load());		
+			hookStage.hang(stage);
 
 			if (!stage.isShowing())
 				stage.show();
@@ -57,14 +45,7 @@ public class AppStage extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 
-			if (stage.getScene() == null) {
-				stage.setScene(new Scene(fxmlLoader.load()));				
-			} else {
-				double width = stage.getScene().getWidth();
-				double height = stage.getScene().getHeight();
-				stage.setScene(new Scene(fxmlLoader.load(), width,height));								
-			}
-
+			setScene(fxmlLoader.load());
 			hookController.hang(fxmlLoader.getController());
 
 			if (!stage.isShowing())
@@ -79,14 +60,7 @@ public class AppStage extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 
-			if (stage.getScene() == null) {
-				stage.setScene(new Scene(fxmlLoader.load()));				
-			} else {
-				double width = stage.getScene().getWidth();
-				double height = stage.getScene().getHeight();
-				stage.setScene(new Scene(fxmlLoader.load(), width,height));								
-			}
-
+			setScene(fxmlLoader.load());
 			hookStageController.hang(stage, fxmlLoader.getController());
 
 			if (!stage.isShowing())
@@ -95,8 +69,20 @@ public class AppStage extends AppStart {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public static void setTitle(String title) {
 		stage.setTitle(title);
+	}
+	
+	private static void setScene(Parent parent) {
+		if (stage.getScene() == null) {
+			stage.setScene(new Scene(parent));				
+		} else {
+			double width = stage.getScene().getWidth();
+			double height = stage.getScene().getHeight();
+			stage.setScene(new Scene(parent, width, height));								
+		}
+		
+		stage.getScene().getRoot().setStyle(AppStyle.getVars());
 	}
 }

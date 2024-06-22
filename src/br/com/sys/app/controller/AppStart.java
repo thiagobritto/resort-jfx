@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import br.com.sys.app.model.domain.AppView;
 import br.com.sys.app.view.build.AppStage;
+import br.com.sys.app.view.build.AppStyle;
 import javafx.application.Application;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;

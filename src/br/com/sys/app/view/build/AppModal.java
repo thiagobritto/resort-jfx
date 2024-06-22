@@ -6,6 +6,7 @@ import br.com.sys.app.model.interfaces.HookController;
 import br.com.sys.app.model.interfaces.HookStage;
 import br.com.sys.app.model.interfaces.HookStageController;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class AppModal extends AppStart {
@@ -15,7 +16,7 @@ public class AppModal extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 			
-			modal.setScene(new Scene(fxmlLoader.load()));
+			setScene(fxmlLoader.load());
 			
 			if (!modal.isShowing())
 				modal.show();
@@ -29,7 +30,7 @@ public class AppModal extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 			
-			modal.setScene(new Scene(fxmlLoader.load()));
+			setScene(fxmlLoader.load());
 			hookStage.hang(modal);
 			
 			if (!modal.isShowing())
@@ -44,7 +45,7 @@ public class AppModal extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 			
-			modal.setScene(new Scene(fxmlLoader.load()));
+			setScene(fxmlLoader.load());
 			hookController.hang(fxmlLoader.getController());
 			
 			if (!modal.isShowing())
@@ -59,7 +60,7 @@ public class AppModal extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 			
-			modal.setScene(new Scene(fxmlLoader.load()));
+			setScene(fxmlLoader.load());
 			hookStageController.hang(modal, fxmlLoader.getController());
 			
 			if (!modal.isShowing())
@@ -71,5 +72,10 @@ public class AppModal extends AppStart {
 
 	public static void setTitle(String title) {
 		modal.setTitle(title);
+	}
+	
+	private static void setScene(Parent parent) {
+		modal.setScene(new Scene(parent));
+		modal.getScene().getRoot().setStyle(AppStyle.getVars());
 	}
 }
