@@ -14,48 +14,56 @@ public class AppStage extends AppStart {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
-			
+
 			stage.setScene(new Scene(fxmlLoader.load()));
-			stage.show();
+
+			if (!stage.isShowing())
+				stage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void load(AppView view, HookStage hookStage) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
-			
+
 			stage.setScene(new Scene(fxmlLoader.load()));
 			hookStage.hang(modal);
-			stage.show();
+
+			if (!stage.isShowing())
+				stage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static <T> void load(AppView view, HookController<T> hookController) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
-			
+
 			stage.setScene(new Scene(fxmlLoader.load()));
 			hookController.hang(fxmlLoader.getController());
-			stage.show();
+
+			if (!stage.isShowing())
+				stage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static <T> void load(AppView view, HookStageController<T> hookStageController) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
-			
+
 			stage.setScene(new Scene(fxmlLoader.load()));
 			hookStageController.hang(stage, fxmlLoader.getController());
-			stage.show();
+
+			if (!stage.isShowing())
+				stage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -16,7 +16,9 @@ public class AppModal extends AppStart {
 			fxmlLoader.setLocation(view.getURL());
 			
 			modal.setScene(new Scene(fxmlLoader.load()));
-			modal.show();
+			
+			if (!modal.isShowing())
+				modal.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -29,7 +31,9 @@ public class AppModal extends AppStart {
 			
 			modal.setScene(new Scene(fxmlLoader.load()));
 			hookStage.hang(modal);
-			modal.showAndWait();
+			
+			if (!modal.isShowing())
+				modal.showAndWait();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -42,7 +46,9 @@ public class AppModal extends AppStart {
 			
 			modal.setScene(new Scene(fxmlLoader.load()));
 			hookController.hang(fxmlLoader.getController());
-			modal.showAndWait();
+			
+			if (!modal.isShowing())
+				modal.showAndWait();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -55,7 +61,9 @@ public class AppModal extends AppStart {
 			
 			modal.setScene(new Scene(fxmlLoader.load()));
 			hookStageController.hang(modal, fxmlLoader.getController());
-			modal.showAndWait();
+			
+			if (!modal.isShowing())
+				modal.showAndWait();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
