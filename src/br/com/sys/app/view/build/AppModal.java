@@ -68,4 +68,8 @@ public class AppModal extends AppStart {
 			e.printStackTrace();
 		}
 	}
+
+	public static void setTitle(String title) {
+		modal.setTitle(title);
+	}
 }

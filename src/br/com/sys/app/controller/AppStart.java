@@ -34,6 +34,7 @@ public class AppStart extends Application {
 		AppStart.modal.initModality(Modality.WINDOW_MODAL);
 		
 		AppStage.load(AppView.HOME);
+		AppStage.setTitle("System - Home");
 	}
 
 }

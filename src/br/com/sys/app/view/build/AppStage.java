@@ -95,4 +95,8 @@ public class AppStage extends AppStart {
 			e.printStackTrace();
 		}
 	}
+
+	public static void setTitle(String title) {
+		stage.setTitle(title);
+	}
 }
