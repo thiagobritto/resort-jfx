@@ -15,7 +15,13 @@ public class AppStage extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 
-			stage.setScene(new Scene(fxmlLoader.load()));
+			if (stage.getScene() == null) {
+				stage.setScene(new Scene(fxmlLoader.load()));				
+			} else {
+				double width = stage.getScene().getWidth();
+				double height = stage.getScene().getHeight();
+				stage.setScene(new Scene(fxmlLoader.load(), width,height));								
+			}
 
 			if (!stage.isShowing())
 				stage.show();
@@ -29,7 +35,14 @@ public class AppStage extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 
-			stage.setScene(new Scene(fxmlLoader.load()));
+			if (stage.getScene() == null) {
+				stage.setScene(new Scene(fxmlLoader.load()));				
+			} else {
+				double width = stage.getScene().getWidth();
+				double height = stage.getScene().getHeight();
+				stage.setScene(new Scene(fxmlLoader.load(), width,height));								
+			}
+
 			hookStage.hang(modal);
 
 			if (!stage.isShowing())
@@ -44,7 +57,14 @@ public class AppStage extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 
-			stage.setScene(new Scene(fxmlLoader.load()));
+			if (stage.getScene() == null) {
+				stage.setScene(new Scene(fxmlLoader.load()));				
+			} else {
+				double width = stage.getScene().getWidth();
+				double height = stage.getScene().getHeight();
+				stage.setScene(new Scene(fxmlLoader.load(), width,height));								
+			}
+
 			hookController.hang(fxmlLoader.getController());
 
 			if (!stage.isShowing())
@@ -59,7 +79,14 @@ public class AppStage extends AppStart {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
 
-			stage.setScene(new Scene(fxmlLoader.load()));
+			if (stage.getScene() == null) {
+				stage.setScene(new Scene(fxmlLoader.load()));				
+			} else {
+				double width = stage.getScene().getWidth();
+				double height = stage.getScene().getHeight();
+				stage.setScene(new Scene(fxmlLoader.load(), width,height));								
+			}
+
 			hookStageController.hang(stage, fxmlLoader.getController());
 
 			if (!stage.isShowing())
