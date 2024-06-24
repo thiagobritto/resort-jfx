@@ -3,11 +3,10 @@ package br.com.sys.app.view.build;
 import br.com.sys.app.controller.AppStart;
 import br.com.sys.app.model.domain.AppView;
 import br.com.sys.app.model.interfaces.HookController;
-import br.com.sys.app.model.interfaces.HookStage;
-import br.com.sys.app.model.interfaces.HookStageController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.WindowEvent;
 
 public class AppStage extends AppStart {
 
@@ -18,21 +17,6 @@ public class AppStage extends AppStart {
 
 			setScene(fxmlLoader.load());
 			
-			if (!stage.isShowing())
-				stage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static void load(AppView view, HookStage hookStage) {
-		try {
-			FXMLLoader fxmlLoader = new FXMLLoader();
-			fxmlLoader.setLocation(view.getURL());
-
-			setScene(fxmlLoader.load());		
-			hookStage.hang(stage);
-
 			if (!stage.isShowing())
 				stage.show();
 		} catch (Exception e) {
@@ -55,14 +39,15 @@ public class AppStage extends AppStart {
 		}
 	}
 
-	public static <T> void load(AppView view, HookStageController<T> hookStageController) {
+	public static <T> void loadAndWhenClose(AppView view, HookController<T> hookController) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
-
+			
 			setScene(fxmlLoader.load());
-			hookStageController.hang(stage, fxmlLoader.getController());
+			stage.setOnCloseRequest(e -> hookController.hang(fxmlLoader.getController()));
 
+			
 			if (!stage.isShowing())
 				stage.show();
 		} catch (Exception e) {
@@ -72,6 +57,10 @@ public class AppStage extends AppStart {
 	
 	public static void setTitle(String title) {
 		stage.setTitle(title);
+	}
+	
+	public static void close() {
+		stage.fireEvent(new WindowEvent(stage, WindowEvent.WINDOW_CLOSE_REQUEST));
 	}
 	
 	private static void setScene(Parent parent) {
