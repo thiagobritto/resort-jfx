@@ -96,9 +96,9 @@ public class ManageClientViewController implements Initializable {
 
 			AlertView.confirm("Deseja excluir o cliente " + getClient().getIdClient() + "?", () -> {
 				clientDao.delete(getClient());
-				AlertView.info("Cliente excluido com sucesso!");				
+				AlertView.info("Cliente excluido com sucesso!");
 				clearFormClient();
-			});	
+			});
 
 		} catch (DialogErrorException e) {
 			AlertView.error(e.getMessage(), e);
