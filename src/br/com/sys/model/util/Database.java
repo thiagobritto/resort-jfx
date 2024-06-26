@@ -1,4 +1,4 @@
-package br.com.sys.app.model.util;
+package br.com.sys.model.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

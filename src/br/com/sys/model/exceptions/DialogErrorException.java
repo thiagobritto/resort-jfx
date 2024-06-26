@@ -1,20 +1,20 @@
-package br.com.sys.app.model.exceptions;
+package br.com.sys.model.exceptions;
 
-public class DialogInfoException extends RuntimeException{
+public class DialogErrorException extends RuntimeException{
 
 	private static final long serialVersionUID = 1L;
 	private String content;
 	
-	public DialogInfoException(String msg) {
+	public DialogErrorException(String msg) {
 		super(msg);
 	}
 	
-	public DialogInfoException(String msg, String content) {
+	public DialogErrorException(String msg, String content) {
 		super(msg);
 		this.content = content;
 	}
 
-	public DialogInfoException(String msg, Throwable cause) {
+	public DialogErrorException(String msg, Throwable cause) {
 		super(msg, cause);
 	}
 	

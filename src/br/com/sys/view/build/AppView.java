@@ -1,10 +1,11 @@
-package br.com.sys.app.model.domain;
+package br.com.sys.view.build;
 
 import java.net.URL;
 
 public enum AppView {
 
-	HOME("/fxml/app/home.fxml");
+	HOME("/fxml/home.fxml"),
+	CLIENT_MANAGE("/fxml/client/manage.fxml");
 	
 	private String path;
 	

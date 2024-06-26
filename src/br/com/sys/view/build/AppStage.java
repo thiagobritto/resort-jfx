@@ -1,8 +1,7 @@
-package br.com.sys.app.view.build;
+package br.com.sys.view.build;
 
-import br.com.sys.app.controller.AppStart;
-import br.com.sys.app.model.domain.AppView;
-import br.com.sys.app.model.interfaces.HookController;
+import br.com.sys.controller.AppStart;
+import br.com.sys.model.interfaces.Hook;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -24,7 +23,7 @@ public class AppStage extends AppStart {
 		}
 	}
 
-	public static <T> void load(AppView view, HookController<T> hookController) {
+	public static <T> void load(AppView view, Hook<T> hookController) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());
@@ -39,7 +38,7 @@ public class AppStage extends AppStart {
 		}
 	}
 
-	public static <T> void loadAndWhenClose(AppView view, HookController<T> hookController) {
+	public static <T> void loadAndWhenClose(AppView view, Hook<T> hookController) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(view.getURL());

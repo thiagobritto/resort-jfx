@@ -1,9 +1,9 @@
-package br.com.sys.app.controller;
+package br.com.sys.controller;
 
 import java.util.Locale;
 
-import br.com.sys.app.model.domain.AppView;
-import br.com.sys.app.view.build.AppStage;
+import br.com.sys.view.build.AppStage;
+import br.com.sys.view.build.AppView;
 import javafx.application.Application;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
