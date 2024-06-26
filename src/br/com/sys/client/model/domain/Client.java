@@ -5,18 +5,18 @@ import java.util.Objects;
 
 public class Client {
 
-	private int idClient;
+	private long idClient;
 	private String name;
 	private String phone;
 	private String cpf;
 	private String rg;
 	private LocalDate birthday;
 
-	public int getIdClient() {
+	public long getIdClient() {
 		return idClient;
 	}
 
-	public void setIdClient(int idClient) {
+	public void setIdClient(long idClient) {
 		this.idClient = idClient;
 	}
 

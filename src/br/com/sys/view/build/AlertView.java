@@ -88,14 +88,23 @@ public class AlertView extends AppStart {
 		alert.setTitle("Erro");
 	}
 	
-	public static void confirm(String msg, Consumer<Boolean> res) {
+	public static void confirm(String msg, Runnable yes) {
+		confirm();
+		alert.setHeaderText(msg);
+		alert.showAndWait().ifPresent( button -> {
+			if(button == ButtonType.YES) 
+				yes.run();
+		});
+	}
+	
+	public static void confirm(String msg, Runnable yes, Runnable no) {
 		confirm();
 		alert.setHeaderText(msg);
 		alert.showAndWait().ifPresent( button -> {
 			if(button == ButtonType.YES) {
-				res.accept(true);
+				yes.run();
 			} else {
-				res.accept(false);				
+				no.run();				
 			}
 		});
 	}

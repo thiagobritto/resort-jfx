@@ -8,6 +8,7 @@ public class AppStyle {
 			+ "-fx-color-3: #E3DADD;"
 			+ "-fx-color-4: #7D8A80;"
 			+ "-fx-color-5: #E3C4B0;"
+			+ "-fx-color-6: #DC3545FF;"
 			+ "-fx-fill-1: #FFFFFFFF;";
 
 	public static void setVar(String key, String value) {

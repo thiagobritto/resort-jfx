@@ -58,7 +58,6 @@
       <HBox layoutX="182.0" layoutY="426.0" minHeight="20.0" prefHeight="20.0" prefWidth="200.0" styleClass="footer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
    <stylesheets>
-      <URL value="@../../css/global.css" />
       <URL value="@../css/global.css" />
    </stylesheets>
 </AnchorPane>

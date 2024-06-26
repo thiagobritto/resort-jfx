@@ -6,7 +6,6 @@ import br.com.sys.view.build.AppView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.ScrollPane;
 
 public class HomeViewController {

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="760.0" stylesheets="@../../css/global.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sys.client.controller.ManageClientViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="750.0" stylesheets="@../../css/global.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sys.client.controller.ManageClientViewController">
    <children>
       <VBox styleClass="form">
          <children>
@@ -50,9 +50,10 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </GridPane>
-            <HBox>
+            <HBox spacing="10.0">
                <children>
                   <Button fx:id="btnSave" disable="true" mnemonicParsing="false" onAction="#handleSave" styleClass="btn-submit" text="Salvar" />
+                  <Button fx:id="btnClear" mnemonicParsing="false" text="Limpar" />
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -98,7 +99,6 @@
                </VBox.margin>
                <children>
                   <Button fx:id="btnDelete" disable="true" mnemonicParsing="false" onAction="#handleDelete" styleClass="btn-delete" text="Excluir" />
-                  <Button fx:id="btnEdit" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleEdit" text="Editar" />
                </children>
             </HBox>
          </children>
