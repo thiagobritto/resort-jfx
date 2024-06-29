@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import br.com.sys.main.util.Mask;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -55,10 +56,15 @@ public class ManageRoomViewConreoller implements Initializable {
     
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		Mask.codeLimit(txtNumber, 6);
-		Mask.brl(txtPrice);
+		// SETTING MASK
+    	Mask.codeLimit(txtNumber, 6);
+		Mask.codeLimit(txtAmount, 6);
+		Mask.money(txtPrice);
 		
-	}
+		// ADD FOCUS TO THREAD
+		Platform.runLater(() -> txtNumber.requestFocus());
+    
+    }
     
     @FXML
     void handleDelete(ActionEvent event) {

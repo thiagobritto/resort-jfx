@@ -35,7 +35,7 @@ public class Mask {
 
 		});
 	}
-	
+
 	public static void rg(TextField field) {
 
 		field.textProperty().addListener(($obs, $old, $new) -> {
@@ -49,7 +49,7 @@ public class Mask {
 
 		});
 	}
-	
+
 	public static void code(TextField field) {
 
 		field.textProperty().addListener(($obs, $old, $new) -> {
@@ -58,7 +58,7 @@ public class Mask {
 
 		});
 	}
-	
+
 	public static void codeLimit(TextField field, Integer limit) {
 
 		field.textProperty().addListener(($obs, $old, $new) -> {
@@ -72,10 +72,45 @@ public class Mask {
 
 		});
 	}
-	
-	public static void brl(TextField field) {
 
-		
+	public static void weight(TextField field) {
+
+		field.textProperty().addListener(($obs, $old, $new) -> {
+
+			$new = $new.trim().replaceAll("[^0-9]|^0\\.0*", "");
+			if ($new.length() < 1) {
+				field.setText("0.000");
+			} else if ($new.length() == 1) {
+				field.setText("0.00" + $new);
+			} else if ($new.length() == 2) {
+				field.setText("0.0" + $new);
+			} else if ($new.length() == 3) {
+				field.setText("0." + $new);
+			} else if ($new.length() > 3) {
+				field.setText($new.replaceAll("(\\d*)(\\d{3})", "$1.$2"));
+			}
+
+		});
+	}
+	
+	public static void money(TextField field) {
+
+		field.textProperty().addListener(($obs, $old, $new) -> {
+
+			$new = $new.trim().replaceAll("[^0-9]|^0\\,0*", "");
+			if ($new.length() < 1) {
+				field.setText("0,00");
+			} else if ($new.length() == 1) {
+				field.setText("0,0" + $new);
+			} else if ($new.length() == 2) {
+				field.setText("0," + $new);
+			} else if ($new.length() > 2 && $new.length() <= 12) {
+				field.setText($new.replaceAll("(\\d*)(\\d{2})", "$1,$2"));
+			} else if ($new.length() > 12) {
+				field.setText($old);
+			}
+
+		});
 	}
 
 }

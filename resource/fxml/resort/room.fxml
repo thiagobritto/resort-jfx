@@ -37,7 +37,7 @@
               </rowConstraints>
                <children>
                   <TextField fx:id="txtNumber" promptText="Numero" GridPane.columnIndex="1" />
-                  <TextField fx:id="txtPrice" promptText="R$ " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtPrice" promptText="R$ " text="0,00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="txtAmount" promptText="Qtd leitos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label text="Diaria R$ *" GridPane.rowIndex="1" />
                   <Label text="Numero *" />
@@ -87,7 +87,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </HBox>
-            <TableView fx:id="tableView" prefHeight="150.0">
+            <TableView fx:id="tableView" prefHeight="120.0">
               <columns>
                 <TableColumn fx:id="colNumber" prefWidth="77.0" text="Numero" />
                   <TableColumn fx:id="colDescription" prefWidth="230.0" text="Descrição" />
