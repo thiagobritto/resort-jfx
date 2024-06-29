@@ -4,9 +4,9 @@ import java.net.URL;
 
 public enum AppView {
 
-	HOME("/fxml/admin/dashboard.fxml"),
+	ADMIN_DASHBOARD("/fxml/admin/dashboard.fxml"),
 	CLIENT_MANAGE("/fxml/client/manage.fxml"),
-	RESORT_ROOM("/fxml/resort/room.fxml");
+	ROOM_MANAGE("/fxml/room/manage.fxml");
 	
 	private String path;
 	

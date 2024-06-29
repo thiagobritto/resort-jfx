@@ -31,7 +31,7 @@ public class AppStart extends Application {
 		AppStart.modal.getIcons().add(image);
 		AppStart.modal.initModality(Modality.WINDOW_MODAL);
 		
-		AppStage.load(AppView.HOME);
+		AppStage.load(AppView.ADMIN_DASHBOARD);
 		AppStage.setTitle("System - Home");
 	}
 

@@ -1,4 +1,4 @@
-package br.com.sys.resort.controller;
+package br.com.sys.room.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;

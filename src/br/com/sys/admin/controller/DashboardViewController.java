@@ -20,7 +20,7 @@ public class DashboardViewController {
 
 	@FXML
 	void handleManageRoom(ActionEvent event) throws IOException {
-		mainPane.setContent(FXMLLoader.load(AppView.RESORT_ROOM.getURL()));
+		mainPane.setContent(FXMLLoader.load(AppView.ROOM_MANAGE.getURL()));
 	}
 
 }
