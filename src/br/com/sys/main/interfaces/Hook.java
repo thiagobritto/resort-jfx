@@ -1,4 +1,4 @@
-package br.com.sys.model.interfaces;
+package br.com.sys.main.interfaces;
 
 @FunctionalInterface
 public interface Hook<T> {	

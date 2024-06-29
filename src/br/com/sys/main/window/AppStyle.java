@@ -1,4 +1,4 @@
-package br.com.sys.view.build;
+package br.com.sys.main.window;
 
 public class AppStyle {
 

@@ -1,11 +1,12 @@
-package br.com.sys.view.build;
+package br.com.sys.main.window;
 
 import java.net.URL;
 
 public enum AppView {
 
-	HOME("/fxml/home.fxml"),
-	CLIENT_MANAGE("/fxml/client/manage.fxml");
+	HOME("/fxml/admin/dashboard.fxml"),
+	CLIENT_MANAGE("/fxml/client/manage.fxml"),
+	RESORT_ROOM("/fxml/resort/room.fxml");
 	
 	private String path;
 	

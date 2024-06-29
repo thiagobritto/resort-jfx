@@ -1,10 +1,8 @@
-package br.com.sys.view.build;
+package br.com.sys.main.window;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.function.Consumer;
 
-import br.com.sys.controller.AppStart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;

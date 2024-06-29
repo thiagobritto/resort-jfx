@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 import br.com.sys.client.model.domain.Client;
-import br.com.sys.model.util.ValidaCPF;
+import br.com.sys.main.util.ValidaCPF;
 
 public class ClientValidation {
 

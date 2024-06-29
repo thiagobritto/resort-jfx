@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
@@ -13,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane minHeight="540.0" minWidth="960.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sys.controller.HomeViewController">
+<AnchorPane minHeight="540.0" minWidth="960.0" stylesheets="@../../css/global.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sys.admin.controller.DashboardViewController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="228.0" minHeight="60.0" prefHeight="60.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -22,7 +21,7 @@
                   <Insets left="10.0" right="10.0" />
                </HBox.margin>
                <image>
-                  <Image url="@../img/icon/favicon.png" />
+                  <Image url="@../../img/icon/favicon.png" />
                </image>
             </ImageView>
             <VBox alignment="CENTER_LEFT">
@@ -50,14 +49,11 @@
          <content>
             <ImageView pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/wallpaper.jpg" />
+                  <Image url="@../../img/wallpaper.jpg" />
                </image>
             </ImageView>
          </content>
       </ScrollPane>
       <HBox layoutX="182.0" layoutY="426.0" minHeight="20.0" prefHeight="20.0" prefWidth="200.0" styleClass="footer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
-   <stylesheets>
-      <URL value="@../css/global.css" />
-   </stylesheets>
 </AnchorPane>

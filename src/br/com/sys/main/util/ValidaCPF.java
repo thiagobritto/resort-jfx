@@ -1,4 +1,4 @@
-package br.com.sys.model.util;
+package br.com.sys.main.util;
 
 import java.util.InputMismatchException;
 

@@ -1,7 +1,6 @@
-package br.com.sys.view.build;
+package br.com.sys.main.window;
 
-import br.com.sys.controller.AppStart;
-import br.com.sys.model.interfaces.Hook;
+import br.com.sys.main.interfaces.Hook;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

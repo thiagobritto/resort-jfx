@@ -1,20 +1,20 @@
-package br.com.sys.model.exceptions;
+package br.com.sys.main.exceptions;
 
-public class DialogInfoException extends RuntimeException{
+public class DialogWarningException extends RuntimeException{
 
 	private static final long serialVersionUID = 1L;
 	private String content;
 	
-	public DialogInfoException(String msg) {
+	public DialogWarningException(String msg) {
 		super(msg);
 	}
 	
-	public DialogInfoException(String msg, String content) {
+	public DialogWarningException(String msg, String content) {
 		super(msg);
 		this.content = content;
 	}
 
-	public DialogInfoException(String msg, Throwable cause) {
+	public DialogWarningException(String msg, Throwable cause) {
 		super(msg, cause);
 	}
 	
@@ -25,5 +25,4 @@ public class DialogInfoException extends RuntimeException{
 	public String getContent() {
 		return content.isBlank() ? "" : content;
 	}
-	
 }

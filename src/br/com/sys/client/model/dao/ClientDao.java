@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Optional;
 
 import br.com.sys.client.model.domain.Client;
-import br.com.sys.model.exceptions.DialogErrorException;
-import br.com.sys.model.util.Database;
+import br.com.sys.main.exceptions.DialogErrorException;
+import br.com.sys.main.util.Database;
 
 public class ClientDao implements ClientDaoInterface {
 

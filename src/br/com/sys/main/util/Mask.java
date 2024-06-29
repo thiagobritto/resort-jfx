@@ -1,4 +1,4 @@
-package br.com.sys.model.util;
+package br.com.sys.main.util;
 
 import javafx.scene.control.TextField;
 
@@ -48,6 +48,34 @@ public class Mask {
 			}
 
 		});
+	}
+	
+	public static void code(TextField field) {
+
+		field.textProperty().addListener(($obs, $old, $new) -> {
+
+			field.setText($new.trim().replaceAll("[^0-9]", ""));
+
+		});
+	}
+	
+	public static void codeLimit(TextField field, Integer limit) {
+
+		field.textProperty().addListener(($obs, $old, $new) -> {
+
+			$new = $new.trim().replaceAll("[^0-9]", "");
+			if ($new.length() <= limit) {
+				field.setText($new);
+			} else {
+				field.setText($old);
+			}
+
+		});
+	}
+	
+	public static void brl(TextField field) {
+
+		
 	}
 
 }
